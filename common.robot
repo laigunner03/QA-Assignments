@@ -20,4 +20,11 @@ Login
 	 input text     ${pw_field}      ${my_pw}
 	 Click Element   ${login_oauth_btn}
 
-
+Account
+    wait until page does not contain element    dt_core_header_acc-info-preloader   60
+    wait until page contains element    //*[@id="dt_core_account-info_acc-info"]
+    click element   //*[@id="dt_core_account-info_acc-info"]
+    wait until page contains element    //*[@id="dt_core_account-switcher_demo-tab"]     60
+    click element   //*[@id="dt_core_account-switcher_demo-tab"]
+    click element   //*[contains(@id,"dt_VRTC")]
+    reload page
